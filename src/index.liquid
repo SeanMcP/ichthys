@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ meta.title }}</title>
+    <link rel="stylesheet" href="/assets/base.css">
+    <link rel="stylesheet" href="/assets/home.css">
+  </head>
+  <body>
+    <main>
+      <h1>{{ meta.title }}</h1>
+      <nav aria-label="member sites">
+        {% for member in members %}
+          <a href={{member.url}}>{{ member.name }} ({{ member.url | niceURL }})</a>
+        {% endfor %}
+      </nav>
+      <hr>
+      <blockquote>
+        <p>We are therefore Christ’s ambassadors, as though God were making his appeal through us. We implore you on Christ’s behalf: Be reconciled to God. God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.</p>
+        <cite>2 Corinthians 5:20-21</cite>
+      </blockquote>
+      <a href="/next?id=seanmcp">Next</a>
+    </main>
+  </body>
+</html>
